@@ -8,10 +8,10 @@
   --border: #D1D1D6;
   --surface-alt: #F9FAFB;
   --surface: #FFFFFF;
-  --accent: #FFC84E;
-  --accent-hover: #F2B63A;
-  --on-accent: #000000;
-  --promo: #199861;
+  --accent: #E6007E;
+  --accent-hover: #C1006A;
+  --on-accent: #FFFFFF;
+  --promo: #E6007E;
   --on-promo: #FFFFFF;
 
   --font-display: "Fraunces", "DM Serif Display", Georgia, serif;
@@ -245,7 +245,7 @@ a { color: inherit; text-decoration: none; }
 .hero__benefit svg { width: 36px; height: 36px; }
 .hero__benefit span {
   font: 700 13px/1.3 var(--font-sans);
-  color: #000;
+  color: #fff;
 }
 
 /* ========== Intro centralizada ========== */
