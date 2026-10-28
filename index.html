@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prato Fresco — Refeições prontas entregues na sua casa</title>
+<meta name="description" content="Refeições prontas, feitas por chefs, entregues frescas na sua porta. Peça em 2 minutos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo principal</a>
+
+<!-- Barra de anúncio -->
+<div class="promo-bar">Ganhe 50% de desconto na sua primeira semana!</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container" style="width:100%; justify-content: space-between; display:flex; align-items:center;">
+    <div class="header__left">
+      <button class="header__burger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <span class="header__logo">Prato<span class="dot">Fresco</span></span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__text">
+      <h1>Comida de verdade,<br>pronta em 2 minutos</h1>
+      <p class="hero__subtitle">Refeições criadas por chefs, feitas com ingredientes frescos e entregues na sua porta. Sem compras, sem louça, sem complicação.</p>
+      <form class="cep-form" id="cep-form-hero" novalidate>
+        <div class="cep-form__field-wrap">
+          <span class="cep-form__pin" aria-hidden="true">📍</span>
+          <label class="sr-only" for="cep-hero">Digite seu CEP</label>
+          <input type="text" id="cep-hero" inputmode="numeric" placeholder="Digite seu CEP" maxlength="9">
+        </div>
+        <button type="submit">Faça seu pedido agora</button>
+      </form>
+      <span class="cep-error" id="cep-error-hero">Digite um CEP válido (00000-000).</span>
+    </div>
+    <div class="hero__media" style="background-image: linear-gradient(135deg,#3a3a3a,#1a1a1a);">
+    </div>
+  </section>
+  <div class="hero__benefits">
+    <div class="hero__benefit">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#000" stroke-width="2"><circle cx="24" cy="24" r="18"/><path d="M24 14v10l7 4"/></svg>
+      <span>Mais de 300 refeições por semana</span>
+    </div>
+    <div class="hero__benefit">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#000" stroke-width="2"><path d="M8 20l16-10 16 10v16a2 2 0 01-2 2H10a2 2 0 01-2-2z"/></svg>
+      <span>Entregue sempre fresco</span>
+    </div>
+    <div class="hero__benefit">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#000" stroke-width="2"><rect x="10" y="14" width="28" height="22" rx="2"/><path d="M18 14v-4h12v4"/></svg>
+      <span>Pronto em 2 minutos no micro-ondas</span>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container intro">
+      <h2 class="section-title">Pratos incríveis, feitos por chefs de verdade</h2>
+      <p>Toda semana, nossos chefs preparam novas receitas usando ingredientes frescos e sazonais. Você escolhe o que quiser comer — nós cuidamos do resto.</p>
+    </div>
+  </section>
+
+  <!-- Carrossel de pratos -->
+  <section class="section">
+    <div class="container">
+      <div class="carousel">
+        <div class="carousel__track" id="carousel-track">
+          <article class="dish-card">
+            <div class="dish-card__photo" style="background:#e8d9c3;">
+              <div class="dish-card__badges">
+                <span class="badge">★ 4.4 (346)</span>
+                <span class="badge">710 cal</span>
+              </div>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__chef">
+                <span style="width:28px;height:28px;border-radius:50%;background:#ccc;display:inline-block;"></span>
+                <span>Chef Mariana Costa</span>
+              </div>
+              <p class="dish-card__name"><strong>Salmão grelhado</strong> com molho de ervas e legumes salteados</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-card__photo" style="background:#d8e0c3;">
+              <div class="dish-card__badges">
+                <span class="badge">★ 4.7 (210)</span>
+                <span class="badge">580 cal</span>
+              </div>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__chef">
+                <span style="width:28px;height:28px;border-radius:50%;background:#ccc;display:inline-block;"></span>
+                <span>Chef Rafael Nunes</span>
+              </div>
+              <p class="dish-card__name"><strong>Risoto de cogumelos</strong> com parmesão e manjericão fresco</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-card__photo" style="background:#e0c3c3;">
+              <div class="dish-card__badges">
+                <span class="badge">★ 4.6 (158)</span>
+                <span class="badge">640 cal</span>
+              </div>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__chef">
+                <span style="width:28px;height:28px;border-radius:50%;background:#ccc;display:inline-block;"></span>
+                <span>Chef Lívia Prado</span>
+              </div>
+              <p class="dish-card__name"><strong>Frango ao curry</strong> com arroz basmati e legumes</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-card__photo" style="background:#c3d0e0;">
+              <div class="dish-card__badges">
+                <span class="badge">★ 4.5 (298)</span>
+                <span class="badge">510 cal</span>
+              </div>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__chef">
+                <span style="width:28px;height:28px;border-radius:50%;background:#ccc;display:inline-block;"></span>
+                <span>Chef Tiago Alves</span>
+              </div>
+              <p class="dish-card__name"><strong>Bowl vegano</strong> de grão-de-bico, quinoa e abacate</p>
+            </div>
+          </article>
+        </div>
+        <div class="carousel__nav">
+          <button class="carousel__arrow" id="carousel-prev" aria-label="Prato anterior">‹</button>
+          <div class="carousel__dots" id="carousel-dots"></div>
+          <button class="carousel__arrow" id="carousel-next" aria-label="Próximo prato">›</button>
+        </div>
+      </div>
+      <div class="center-action">
+        <a class="btn-pill" href="#menu">Veja o nosso menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloco imagem esquerda + texto direita -->
+  <section class="section">
+    <div class="container split-block">
+      <div class="split-block__media">
+        <div style="background:#2d2d2d;border-radius:12px;aspect-ratio:4/3;"></div>
+      </div>
+      <div class="split-block__text">
+        <span class="split-block__kicker">Feito por chefs, não por fábricas</span>
+        <h2 class="section-title-alt">Cada prato é cozinhado como se fosse para a mesa de um restaurante</h2>
+        <p>Trabalhamos com chefs independentes que preparam cada refeição em pequenos lotes, com ingredientes frescos e sem conservantes artificiais.</p>
+        <form class="cep-form" novalidate>
+          <div class="cep-form__field-wrap">
+            <span class="cep-form__pin" aria-hidden="true">📍</span>
+            <input type="text" inputmode="numeric" placeholder="Digite seu CEP" maxlength="9">
+          </div>
+          <button type="submit">Faça seu pedido agora</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloco texto esquerda + imagem direita -->
+  <section class="section section--alt">
+    <div class="container split-block split-block--reverse">
+      <div class="split-block__media">
+        <div style="background:#3a3a3a;border-radius:12px;aspect-ratio:4/3;"></div>
+      </div>
+      <div class="split-block__text">
+        <span class="split-block__kicker">Sem compromisso, sem complicação</span>
+        <h2 class="section-title-alt">Pause, troque ou cancele quando quiser</h2>
+        <ul class="split-block__list">
+          <li>Sem fidelidade — pause a qualquer semana</li>
+          <li>Escolha entre mais de 30 pratos por semana</li>
+          <li>Entrega no dia e horário que você escolher</li>
+        </ul>
+        <form class="cep-form" novalidate>
+          <div class="cep-form__field-wrap">
+            <span class="cep-form__pin" aria-hidden="true">📍</span>
+            <input type="text" inputmode="numeric" placeholder="Digite seu CEP" maxlength="9">
+          </div>
+          <button type="submit">Faça seu pedido agora</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="section section--lg">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Como funciona</h2>
+      <div class="steps">
+        <div class="step">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#231F20" stroke-width="2"><circle cx="50" cy="50" r="30"/><path d="M50 32v18l12 7"/></svg>
+          <h3>1. Escolha seus pratos</h3>
+          <p>Navegue pelo menu semanal e escolha o que quiser comer.</p>
+        </div>
+        <div class="step">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#231F20" stroke-width="2"><rect x="20" y="30" width="60" height="45" rx="4"/><path d="M35 30v-8h30v8"/></svg>
+          <h3>2. Agende a entrega</h3>
+          <p>Defina o dia e o horário que funcionam melhor para você.</p>
+        </div>
+        <div class="step">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#231F20" stroke-width="2"><path d="M20 45l20-20 40 40-20 20z"/><path d="M40 25l20 20"/></svg>
+          <h3>3. Receba fresco</h3>
+          <p>Sua refeição chega refrigerada, pronta para guardar ou esquentar.</p>
+        </div>
+        <div class="step">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#231F20" stroke-width="2"><rect x="25" y="20" width="50" height="38" rx="3"/><path d="M33 20v-6h34v6"/></svg>
+          <h3>4. Esquente e aproveite</h3>
+          <p>2 minutos no micro-ondas e sua refeição está pronta para servir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por que...? -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Por que escolher o Prato Fresco?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div style="background:#d6c3a8;border-radius:8px;aspect-ratio:260/280;"></div>
+          <h3>Ingredientes de verdade</h3>
+          <p>Sem conservantes, sem aditivos artificiais — só comida de verdade.</p>
+        </div>
+        <div class="why-card">
+          <div style="background:#c3d6b8;border-radius:8px;aspect-ratio:260/280;"></div>
+          <h3>Chefs independentes</h3>
+          <p>Apoiamos cozinheiros locais que colocam paixão em cada prato.</p>
+        </div>
+        <div class="why-card">
+          <div style="background:#d6b8c3;border-radius:8px;aspect-ratio:260/280;"></div>
+          <h3>Flexibilidade total</h3>
+          <p>Pause, pule semanas ou cancele quando quiser, sem multas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chips de categoria -->
+  <section class="section section--alt" id="menu">
+    <div class="container" style="text-align:center;">
+      <h2 class="section-title">Do que você está com vontade de comer?</h2>
+      <div class="chips">
+        <span class="chip">Carne bovina</span>
+        <span class="chip">Frango</span>
+        <span class="chip">Frutos do mar</span>
+        <span class="chip">Vegetariano</span>
+        <span class="chip">Vegano</span>
+        <span class="chip">Mediterrânea</span>
+        <span class="chip">Cetogênica</span>
+        <span class="chip">Sem glúten</span>
+        <span class="chip">Baixo carboidrato</span>
+        <span class="chip">Ótimo para o almoço</span>
+        <span class="chip">Bom para a família</span>
+        <span class="chip">Asiática</span>
+        <span class="chip">Italiana</span>
+      </div>
+      <div class="center-action">
+        <form class="cep-form" style="margin-inline:auto;" novalidate>
+          <div class="cep-form__field-wrap">
+            <span class="cep-form__pin" aria-hidden="true">📍</span>
+            <input type="text" inputmode="numeric" placeholder="Digite seu CEP" maxlength="9">
+          </div>
+          <button type="submit">Faça seu pedido agora</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Imprensa -->
+  <section class="section" style="padding-block:40px;">
+    <div class="container" style="text-align:center;">
+      <p style="color:var(--muted); font-size:13px; text-transform:uppercase; letter-spacing:1px; margin-bottom: 8px;">Como visto em</p>
+      <div class="press-logos">
+        <span>Revista Sabor</span>
+        <span>Guia Gastrô</span>
+        <span>Vida Prática</span>
+        <span>Folha do Dia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">O que dizem nossos clientes</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__quote">"Nunca pensei que comida pronta pudesse ter esse sabor. Virou rotina em casa."</p>
+          <p class="testimonial__author">— Camila R.</p>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__quote">"A praticidade mudou minha semana. Economizo tempo e ainda como bem."</p>
+          <p class="testimonial__author">— Bruno T.</p>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★☆</div>
+          <p class="testimonial__quote">"Pausar quando viajo é super simples. Recomendo para quem tem rotina corrida."</p>
+          <p class="testimonial__author">— Fernanda L.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--lg section--alt">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Perguntas frequentes</h2>
+      <div class="faq">
+        <details class="faq-item">
+          <summary class="faq-item__q">A oferta de 50% é válida para qual região? <span class="icon">+</span></summary>
+          <p class="faq-item__a">A oferta é válida para todas as regiões de entrega disponíveis. Digite seu CEP para confirmar a cobertura na sua área.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">Posso escolher quais refeições eu recebo? <span class="icon">+</span></summary>
+          <p class="faq-item__a">Sim! Todo cliente escolhe os pratos da semana a partir de um menu com dezenas de opções.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">Como funciona o cancelamento? <span class="icon">+</span></summary>
+          <p class="faq-item__a">Você pode pausar ou cancelar sua assinatura a qualquer momento, sem multas, direto no seu painel.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">As refeições servem para dietas específicas? <span class="icon">+</span></summary>
+          <p class="faq-item__a">Sim, temos opções vegetarianas, veganas, sem glúten, cetogênicas e low carb.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__col">
+        <div class="footer__logo">Prato Fresco</div>
+        <p style="font-size:13px; color:#8A8A8A;">Comida de verdade, feita por chefs, entregue na sua porta.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Torne-se um chef</a></li>
+          <li><a href="#">Imprensa</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Cartão-presente</a></li>
+          <li><a href="#">Mapa de entrega</a></li>
+          <li><a href="#">Sustentabilidade</a></li>
+          <li><a href="#">Central de ajuda</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Prato Fresco. Todos os direitos reservados.</span>
+      <span>Site de exemplo — marca fictícia, sem afiliação com terceiros.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra fixa inferior -->
+<div class="sticky-cta" id="sticky-cta">
+  <span class="sticky-cta__text">Ganhe 50% de desconto na sua primeira semana!</span>
+  <form class="cep-form" id="cep-form-sticky" novalidate>
+    <div class="cep-form__field-wrap">
+      <span class="cep-form__pin" aria-hidden="true">📍</span>
+      <label class="sr-only" for="cep-sticky">Digite seu CEP</label>
+      <input type="text" id="cep-sticky" inputmode="numeric" placeholder="Digite seu CEP" maxlength="9">
+    </div>
+    <button type="submit">Pedir agora</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
