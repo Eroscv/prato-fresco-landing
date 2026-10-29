@@ -1,26 +1,27 @@
 :root {
-  --ink: #231F20;
-  --black: #010101;
-  --heading-deep: #0E031D;
-  --text-2: #4D4D4F;
-  --muted: #707070;
+  --ink: #191919;
+  --black: #101010;
+  --heading-deep: #191919;
+  --text-2: #5B5B5F;
+  --muted: #5B5B5F;
   --disabled: #A8A8A8;
   --border: #D1D1D6;
-  --surface-alt: #F9FAFB;
+  --surface-alt: #F6F3EA;
   --surface: #FFFFFF;
-  --accent: #E6007E;
-  --accent-hover: #C1006A;
+  --accent: #E50145;
+  --accent-hover: #BE0139;
   --on-accent: #FFFFFF;
-  --promo: #E6007E;
+  --promo: #E50145;
   --on-promo: #FFFFFF;
 
-  --font-display: "Fraunces", "DM Serif Display", Georgia, serif;
+  --font-display: "Anton", "Archivo Black", Impact, sans-serif;
+  --font-btn: "Barlow Condensed", "Figtree", sans-serif;
   --font-sans: "Figtree", "Inter", system-ui, -apple-system, sans-serif;
 
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-pill: 9999px;
-  --shadow-card: 0 0 12px rgba(35,31,32,.10), 0 12px 24px rgba(35,31,32,.07);
+  --shadow-card: 0 0 12px rgba(25,25,25,.10), 0 12px 24px rgba(25,25,25,.07);
 
   --container-max: 1440px;
 }
@@ -39,24 +40,31 @@ body {
 
 img { max-width: 100%; display: block; }
 
-h1, h2 { font-family: var(--font-display); font-weight: 700; margin: 0; }
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
 h1 {
-  font-size: clamp(40px, 6vw, 64px);
-  line-height: 1;
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 0.95;
   color: #fff;
 }
 
 h2.section-title {
-  font-size: 34px;
-  line-height: 40px;
+  font-size: 36px;
+  line-height: 42px;
   color: var(--heading-deep);
 }
 
 h2.section-title-alt {
-  font-size: 28px;
-  line-height: 44px;
+  font-size: 30px;
+  line-height: 36px;
   color: var(--ink);
+  text-transform: uppercase;
 }
 
 h3 { font: 700 20px/24px var(--font-sans); margin: 0; }
@@ -110,7 +118,9 @@ a { color: inherit; text-decoration: none; }
   background: var(--promo);
   color: var(--on-promo);
   text-align: center;
-  font: 700 14px/1 var(--font-sans);
+  font: 700 15px/1 var(--font-btn);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
   padding: 8px 16px;
 }
 
@@ -135,10 +145,11 @@ a { color: inherit; text-decoration: none; }
 .header__burger span { display: block; height: 2px; background: #fff; border-radius: 1px; }
 .header__logo {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 22px;
   color: #fff;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 .header__logo .dot { color: var(--accent); }
 
@@ -179,7 +190,9 @@ a { color: inherit; text-decoration: none; }
   color: var(--on-accent);
   border: 0;
   border-radius: 0 66px 66px 0;
-  font: 700 16px/1.2 var(--font-sans);
+  font: 700 17px/1.2 var(--font-btn);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
   cursor: pointer;
   white-space: nowrap;
   transition: background .15s ease, transform .15s ease;
@@ -354,10 +367,34 @@ a { color: inherit; text-decoration: none; }
   color: var(--on-accent);
   padding: 13px 33px;
   border-radius: var(--radius-pill);
-  font: 700 16px var(--font-sans);
+  font: 700 17px var(--font-btn);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
   border: 0;
   cursor: pointer;
   transition: background .15s ease, transform .15s ease;
+}
+
+.coupon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  border: 2px solid var(--black);
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font: 700 20px var(--font-btn);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.coupon-pill__label {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink);
 }
 .btn-pill:hover { background: var(--accent-hover); transform: translateY(-1px); }
 
@@ -547,10 +584,37 @@ a { color: inherit; text-decoration: none; }
 }
 .sticky-cta.visible { transform: translateY(0); }
 .sticky-cta__text {
-  font: 700 16px/1.3 var(--font-sans);
+  font: 700 16px/1.3 var(--font-btn);
+  text-transform: uppercase;
   color: var(--ink);
   max-width: 260px;
 }
+
+/* ========== Fitas decorativas (elemento assinatura) ========== */
+.tape-wrap {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+}
+.tape {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  background: var(--accent);
+  color: #fff;
+  font: 700 14px/1 var(--font-btn);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  padding: 8px 0;
+  text-align: center;
+  overflow: hidden;
+}
+.tape--1 { top: -4%; transform: rotate(-6deg); }
+.tape--2 { bottom: -4%; transform: rotate(5deg); background: var(--black); }
+
+.hero__media .tape--1 { top: 18%; }
+.hero__media .tape--2 { bottom: 14%; }
 @media (min-width: 1024px) {
   .sticky-cta { padding: 14px 48px; }
   .sticky-cta__text { font-size: 20px; max-width: none; }

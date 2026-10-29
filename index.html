@@ -7,7 +7,7 @@
 <meta name="description" content="Refeições prontas, feitas por chefs, entregues frescas na sua porta. Peça em 2 minutos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -45,7 +45,9 @@
       </form>
       <span class="cep-error" id="cep-error-hero">Digite um CEP válido (00000-000).</span>
     </div>
-    <div class="hero__media" style="background-image: linear-gradient(135deg,#3a3a3a,#1a1a1a);">
+    <div class="hero__media tape-wrap" style="background-image: linear-gradient(135deg,#3a3a3a,#1a1a1a);">
+      <div class="tape tape--1">SITE INTEIRO COM DESCONTO • SITE INTEIRO COM DESCONTO •</div>
+      <div class="tape tape--2">UM MÊS INTEIRO DE OFERTAS • UM MÊS INTEIRO DE OFERTAS •</div>
     </div>
   </section>
   <div class="hero__benefits">
@@ -338,6 +340,24 @@
           <p class="faq-item__a">Sim, temos opções vegetarianas, veganas, sem glúten, cetogênicas e low carb.</p>
         </details>
       </div>
+    </div>
+  </section>
+
+  <!-- CTA final com cupom -->
+  <section class="section section--dark tape-wrap" style="text-align:center; padding-block:96px;">
+    <div class="tape tape--1">SITE INTEIRO COM DESCONTO • SITE INTEIRO COM DESCONTO •</div>
+    <div class="tape tape--2">UM MÊS INTEIRO DE OFERTAS • UM MÊS INTEIRO DE OFERTAS •</div>
+    <div class="container" style="position:relative; display:flex; flex-direction:column; gap:20px; align-items:center;">
+      <h2 class="section-title" style="color:#fff;">Use o cupom e garanta seu desconto</h2>
+      <div class="coupon-pill">FRESCO50</div>
+      <p style="color:#D9D9D9; font-size:14px;">*Cupom válido na 1ª compra. Desconto aplicado automaticamente no checkout.</p>
+      <form class="cep-form" style="margin-inline:auto;" novalidate>
+        <div class="cep-form__field-wrap">
+          <span class="cep-form__pin" aria-hidden="true">📍</span>
+          <input type="text" inputmode="numeric" placeholder="Digite seu CEP" maxlength="9">
+        </div>
+        <button type="submit">Faça seu pedido agora</button>
+      </form>
     </div>
   </section>
 
