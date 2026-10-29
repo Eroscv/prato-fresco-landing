@@ -35,18 +35,20 @@
     });
   });
 
-  // ===== Carrossel de pratos =====
-  const track = document.getElementById("carousel-track");
-  const dotsWrap = document.getElementById("carousel-dots");
-  const prevBtn = document.getElementById("carousel-prev");
-  const nextBtn = document.getElementById("carousel-next");
+  // ===== Carrosséis (pratos e catálogo) =====
+  function setupCarousel(trackId, dotsId, prevId, nextId, label) {
+    const track = document.getElementById(trackId);
+    const dotsWrap = document.getElementById(dotsId);
+    const prevBtn = document.getElementById(prevId);
+    const nextBtn = document.getElementById(nextId);
 
-  if (track && dotsWrap) {
+    if (!track || !dotsWrap) return;
+
     const cards = Array.from(track.children);
     cards.forEach(function (_, i) {
       const dot = document.createElement("button");
       dot.className = "carousel__dot" + (i === 0 ? " active" : "");
-      dot.setAttribute("aria-label", "Ir para o prato " + (i + 1));
+      dot.setAttribute("aria-label", "Ir para o " + label + " " + (i + 1));
       dot.addEventListener("click", function () {
         cards[i].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
       });
@@ -75,15 +77,30 @@
 
     if (prevBtn) {
       prevBtn.addEventListener("click", function () {
-        track.scrollBy({ left: -340, behavior: "smooth" });
+        track.scrollBy({ left: -260, behavior: "smooth" });
       });
     }
     if (nextBtn) {
       nextBtn.addEventListener("click", function () {
-        track.scrollBy({ left: 340, behavior: "smooth" });
+        track.scrollBy({ left: 260, behavior: "smooth" });
       });
     }
   }
+
+  setupCarousel("carousel-track", "carousel-dots", "carousel-prev", "carousel-next", "prato");
+  setupCarousel("catalog-track", "catalog-dots", "catalog-prev", "catalog-next", "item");
+
+  // ===== Botões "Adicionar" do catálogo =====
+  document.querySelectorAll(".menu-card__add").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      btn.textContent = "✓";
+      btn.style.background = "var(--accent)";
+      setTimeout(function () {
+        btn.textContent = "+";
+        btn.style.background = "";
+      }, 1200);
+    });
+  });
 
   // ===== Barra fixa inferior =====
   const stickyCta = document.getElementById("sticky-cta");
